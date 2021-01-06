@@ -11,14 +11,14 @@ import pickle
 # In[ ]:
 
 
-with open('C:/Users/ASUS/Desktop/Model','rb') as f:
+with open('D:/coding/model/Model','rb') as f:
     mp = pickle.load(f)
 
 
 # In[ ]:
 
 
-with open('C:/Users/ASUS/Desktop/tfidf','rb') as f:
+with open('D:/coding/model/tfidf','rb') as f:
      tfi = pickle.load(f)
 
 
@@ -32,7 +32,18 @@ def test(data):
     text= Preprocessing_Testing.Preprocessing(kasus)
     tf=tfi.transform(text)
     predictions=mp.predict(tf)
-    predik = format(predictions)
+    if predictions == 0:
+        predictions ="27 ayat 1"
+    elif predictions == 1:
+        predictions ="27 ayat 3"
+    elif predictions == 2:
+        predictions ="27 ayat 4"  
+    elif predictions == 3:
+        predictions ="28 ayat 1"
+    elif predictions == 4:
+        predictions ="27 ayat 2"
+    else:
+        predictions ="Pasal lainya"
     
-    return kasus,text,predik
+    return kasus,text,predictions
 

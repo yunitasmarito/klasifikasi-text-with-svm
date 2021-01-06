@@ -25,13 +25,13 @@ def tranning(data,select_count):
     y = data.Label
     res, features = MI.selection_feature(select_count,X,y)
     tf_mat_unigram, idf_mat_unigram, tfidf_mat_unigram, terms_unigram,tfidf = TFIDF.generate_tfidf_mat(features, X)
-    x_train,x_test,y_train,y_test=train_test_split(tfidf_mat_unigram,y,test_size=0.1, random_state=0)
-    with open('C:/Users/ASUS/Desktop/tfidf','wb') as f:
+    x_train,x_test,y_train,y_test=train_test_split(tfidf_mat_unigram,y,test_size=0.2, random_state=0)
+    with open('D:/coding/model/tfidf','wb') as f:
             pickle.dump(tfidf,f)
             
-    SVM = svm.train_svm(tfidf_mat_unigram,y)
+    SVM = svm.train_svm(x_train,y_train)
 
-    with open('C:/Users/ASUS/Desktop/Model','wb') as f:
+    with open('D:/coding/model/Model','wb') as f:
             pickle.dump(SVM,f)
     pred = SVM.predict(x_test)
     akurasi = SVM.score(x_test, y_test)

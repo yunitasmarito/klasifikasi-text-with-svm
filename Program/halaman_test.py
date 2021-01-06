@@ -102,7 +102,7 @@ class Ui_Form(object):
         data = self.textEdit.toPlainText()
         kasus, preprocessing, clas = testing.test(data)
         self.isikasus.setPlainText(kasus)
-        self.prepro.setPlainText(str(preprocessing))
+        self.prepro.setPlainText(str(preprocessing[0]))
         self.hasil.setText(clas)
 
     def retranslateUi(self, Form):
