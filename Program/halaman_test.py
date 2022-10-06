@@ -9,16 +9,12 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5 import QtCore, QtGui, QtWidgets
-import index
-from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QFileDialog
 import index
 import testing
+import halaman_train as train
 import numpy as np
 import sys
-
-
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -26,62 +22,65 @@ class Ui_Form(object):
         Form.resize(809, 639)
         self.widget = QtWidgets.QWidget(Form)
         self.widget.setGeometry(QtCore.QRect(-10, -10, 871, 721))
-        self.widget.setStyleSheet("background: white;")
+        self.widget.setStyleSheet("")
         self.widget.setObjectName("widget")
         self.label = QtWidgets.QLabel(self.widget)
         self.label.setGeometry(QtCore.QRect(-40, 10, 891, 101))
         self.label.setObjectName("label")
-        self.plihfile = QtWidgets.QPushButton(self.widget)
-        self.plihfile.clicked.connect(self.pildata)
-        self.plihfile.setGeometry(QtCore.QRect(590, 140, 101, 31))
-        self.plihfile.setStyleSheet("font: 12pt \"Tw Cen MT\";background: #7e7e7e;color: white;")
-        self.plihfile.setObjectName("plihfile")
-        self.submit = QtWidgets.QPushButton(self.widget)
-        self.submit.clicked.connect(self.Klasifikasi)
-        self.submit.setGeometry(QtCore.QRect(340, 200, 121, 31))
-        self.submit.setStyleSheet("font: 14pt \"Tw Cen MT\";background: #7e7e7e;color: white;text: bold;")
-        self.submit.setObjectName("submit")
-        self.label_2 = QtWidgets.QLabel(self.widget)
-        self.label_2.setGeometry(QtCore.QRect(20, 140, 301, 31))
-        self.label_2.setStyleSheet("font: 75 12pt \"Tw Cen MT\";")
-        self.label_2.setObjectName("label_2")
-        self.textEdit = QtWidgets.QTextEdit(self.widget)
-        self.textEdit.setGeometry(QtCore.QRect(320, 140, 211, 31))
-        self.textEdit.setObjectName("textEdit")
-        self.kembali = QtWidgets.QPushButton(self.widget)
-        self.kembali.clicked.connect(self.halaman_index)
-        self.kembali.setGeometry(QtCore.QRect(640, 580, 131, 41))
-        self.kembali.setStyleSheet("font: 12pt \"Tw Cen MT\";background: black;color:white;")
-        self.kembali.setObjectName("kembali")
         self.label_5 = QtWidgets.QLabel(self.widget)
-        self.label_5.setGeometry(QtCore.QRect(40, 280, 341, 21))
+        self.label_5.setGeometry(QtCore.QRect(60, 310, 71, 21))
         self.label_5.setStyleSheet("font: 12pt \"Tw Cen MT\";")
         self.label_5.setObjectName("label_5")
         self.isikasus = QtWidgets.QTextEdit(self.widget)
-        self.isikasus.setGeometry(QtCore.QRect(35, 310, 351, 201))
-        self.isikasus.setStyleSheet("font: 12pt \"Tw Cen MT\";")
+        self.isikasus.setGeometry(QtCore.QRect(60, 340, 691, 201))
+        self.isikasus.setStyleSheet("font: 13pt \"Tw Cen MT\";")
         self.isikasus.setObjectName("isikasus")
-        self.prepro = QtWidgets.QTextEdit(self.widget)
-        self.prepro.setGeometry(QtCore.QRect(440, 310, 351, 201))
-        self.prepro.setStyleSheet("font: 12pt \"Tw Cen MT\";")
-        self.prepro.setObjectName("prepro")
-        self.label_7 = QtWidgets.QLabel(self.widget)
-        self.label_7.setGeometry(QtCore.QRect(440, 280, 351, 21))
-        self.label_7.setStyleSheet("font: 12pt \"Tw Cen MT\";")
-        self.label_7.setObjectName("label_7")
-        self.label_15 = QtWidgets.QLabel(self.widget)
-        self.label_15.setGeometry(QtCore.QRect(40, 540, 191, 31))
-        self.label_15.setStyleSheet("font: 12pt \"Tw Cen MT\";")
-        self.label_15.setObjectName("label_15")
-        self.hasil = QtWidgets.QLabel(self.widget)
-        self.hasil.setGeometry(QtCore.QRect(240, 540, 191, 31))
-        self.hasil.setStyleSheet("font: 12pt \"Tw Cen MT\";")
-        self.hasil.setText("")
-        self.hasil.setObjectName("hasil")
+        self.groupBox = QtWidgets.QGroupBox(self.widget)
+        self.groupBox.setGeometry(QtCore.QRect(60, 180, 691, 111))
+        self.groupBox.setTitle("")
+        self.groupBox.setObjectName("groupBox")
+        self.label_2 = QtWidgets.QLabel(self.groupBox)
+        self.label_2.setGeometry(QtCore.QRect(-20, 10, 301, 31))
+        self.label_2.setStyleSheet("font: 75 12pt \"Tw Cen MT\";")
+        self.label_2.setObjectName("label_2")
+        self.textEdit = QtWidgets.QTextEdit(self.groupBox)
+        self.textEdit.setGeometry(QtCore.QRect(260, 10, 211, 31))
+        self.textEdit.setObjectName("textEdit")
+        self.submit = QtWidgets.QPushButton(self.groupBox)
+        self.submit.clicked.connect(self.Klasifikasi)
+        self.submit.setGeometry(QtCore.QRect(280, 60, 121, 31))
+        self.submit.setStyleSheet("font: 14pt \"Tw Cen MT\";background:#6495ED;color: white;text: bold;")
+        self.submit.setObjectName("submit")
+        self.plihfile = QtWidgets.QPushButton(self.groupBox)
+        self.plihfile.setGeometry(QtCore.QRect(510, 10, 101, 31))
+        self.plihfile.setStyleSheet("font: 12pt \"Tw Cen MT\";background: #7e7e7e;color: white;")
+        self.plihfile.setObjectName("plihfile")
+        self.plihfile.clicked.connect(self.pildata)
+        self.reset = QtWidgets.QPushButton(self.widget)
+        self.reset.setGeometry(QtCore.QRect(730, 610, 81, 31))
+        self.reset.setObjectName("reset")
+        self.label_17 = QtWidgets.QLabel(self.widget)
+        self.label_17.setGeometry(QtCore.QRect(60, 560, 191, 31))
+        self.label_17.setStyleSheet("font: 12pt \"Tw Cen MT\";")
+        self.label_17.setObjectName("label_17")
+        self.hasil_3 = QtWidgets.QLabel(self.widget)
+        self.hasil_3.setGeometry(QtCore.QRect(250, 560, 191, 31))
+        self.hasil_3.setStyleSheet("font: 12pt \"Tw Cen MT\";")
+        self.hasil_3.setText("")
+        self.hasil_3.setObjectName("hasil_3")
+        self.testing_2 = QtWidgets.QPushButton(self.widget)
+        self.testing_2.clicked.connect(self.halamantrain)
+        self.testing_2.setGeometry(QtCore.QRect(630, 110, 91, 31))
+        self.testing_2.setStyleSheet("background: #B0E0E6;")
+        self.testing_2.setObjectName("testing_2")
+        self.kembali_2 = QtWidgets.QPushButton(self.widget)
+        self.kembali_2.clicked.connect(self.halaman_index)
+        self.kembali_2.setGeometry(QtCore.QRect(720, 110, 91, 31))
+        self.kembali_2.setStyleSheet("background: #B0E0E6;")
+        self.kembali_2.setObjectName("kembali_2")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
-
 
     def halaman_index(self): 
         widget1 = QtWidgets.QDialog()
@@ -90,6 +89,14 @@ class Ui_Form(object):
         widget1.show()
         #sys.exit(app.exec_())
         widget1.exec_()
+
+    def halamantrain(self): 
+        widget2 = QtWidgets.QDialog()
+        ui=train.Ui_Form()
+        ui.setupUi(widget2)
+        widget2.show()
+        #sys.exit(app.exec_())
+        widget2.exec_()
 
     def pildata(self):
         fname = QFileDialog.getOpenFileName(None, 'Open file', 'D:\coding',"TXT files (*.txt)")
@@ -102,20 +109,21 @@ class Ui_Form(object):
         data = self.textEdit.toPlainText()
         kasus, preprocessing, clas = testing.test(data)
         self.isikasus.setPlainText(kasus)
-        self.prepro.setPlainText(str(preprocessing[0]))
-        self.hasil.setText(clas)
+        #self.prepro.setPlainText(str(preprocessing[0]))
+        self.hasil_3.setText(clas)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
         self.label.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600;\">KLASIFIKASI JENIS UU ITE MENGGUNAKAN TEXT MINING PADA </span></p><p align=\"center\"><span style=\" font-size:14pt; font-weight:600;\">KASUS KEJAHATAN SIBER</span></p></body></html>"))
-        self.plihfile.setText(_translate("Form", "Pilih File"))
-        self.submit.setText(_translate("Form", "Klasifikasi"))
-        self.label_2.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:11pt;\">Masukkan File Kasus Kejahatan Siber</span></p></body></html>"))
-        self.kembali.setText(_translate("Form", "KEMBALI"))
         self.label_5.setText(_translate("Form", "<html><head/><body><p align=\"center\">ISI KASUS</p></body></html>"))
-        self.label_7.setText(_translate("Form", "<html><head/><body><p align=\"center\">HASIL PREPROCESSING</p></body></html>"))
-        self.label_15.setText(_translate("Form", "Kasus Tersebut Terjerat Pasal "))
+        self.label_2.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:11pt;\">Masukkan File Kasus Kejahatan Siber</span></p></body></html>"))
+        self.submit.setText(_translate("Form", "Klasifikasi"))
+        self.plihfile.setText(_translate("Form", "Pilih File"))
+        self.reset.setText(_translate("Form", "reset"))
+        self.label_17.setText(_translate("Form", "Kasus Tersebut Terjerat Pasal "))
+        self.testing_2.setText(_translate("Form", "Tranning"))
+        self.kembali_2.setText(_translate("Form", "Kembali"))
 
 
 if __name__ == "__main__":

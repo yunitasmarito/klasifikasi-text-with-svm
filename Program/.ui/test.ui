@@ -13,17 +13,24 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QWidget" name="widget" native="true">
+  <widget class="QPlainTextEdit" name="plainTextEdit">
    <property name="geometry">
     <rect>
-     <x>-21</x>
-     <y>-1</y>
-     <width>791</width>
-     <height>581</height>
+     <x>93</x>
+     <y>190</y>
+     <width>291</width>
+     <height>71</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">background: white;</string>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>80</y>
+     <width>271</width>
+     <height>71</height>
+    </rect>
    </property>
   </widget>
  </widget>

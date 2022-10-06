@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>769</width>
-    <height>577</height>
+    <width>805</width>
+    <height>631</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,162 +18,193 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>771</width>
-     <height>581</height>
+     <width>821</width>
+     <height>631</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background: white;</string>
+    <string notr="true"/>
    </property>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>20</y>
-      <width>771</width>
+      <y>0</y>
+      <width>801</width>
       <height>101</height>
      </rect>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;KLASIFIKASI JENIS UU ITE MENGGUNAKAN&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;TEXT MINING PADA KASUS KEJAHATAN SIBER&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;KLASIFIKASI JENIS UU ITE MENGGUNAKAN TEXT MINING PADA&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;KASUS KEJAHATAN SIBER&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pilihfile">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>220</y>
-      <width>101</width>
-      <height>41</height>
+      <x>130</x>
+      <y>230</y>
+      <width>551</width>
+      <height>291</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Tw Cen MT&quot;;
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>0</y>
+       <width>301</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 12pt &quot;Tw Cen MT&quot;;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Masukkan File Kasus Kejahatan Siber&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="file">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>60</y>
+       <width>251</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pilihfile">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>60</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;Tw Cen MT&quot;;
 background: #7e7e7e;
 color: white;</string>
-    </property>
-    <property name="text">
-     <string>Pilih File</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="traindata">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>380</y>
-      <width>171</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Tw Cen MT&quot;;background: #7e7e7e; color: white;text: bold;</string>
-    </property>
-    <property name="text">
-     <string>TRAIN DATA</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>150</y>
-      <width>301</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 12pt &quot;Tw Cen MT&quot;;</string>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Masukkan File Kasus Kejahatan Siber&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="textEdit">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>220</y>
-      <width>301</width>
-      <height>41</height>
-     </rect>
-    </property>
+     </property>
+     <property name="text">
+      <string>Pilih File</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>100</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 14pt &quot;Tw Cen MT&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Berikan Jumlah Term:</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="select_count">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>110</y>
+       <width>191</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="traindata">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>170</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:#6495ED;font: 14pt &quot;Tw Cen MT&quot;; color: white;text: bold;</string>
+     </property>
+     <property name="text">
+      <string>TRAIN DATA</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>240</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;Tw Cen MT&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Hasil Akurasi Tranning:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="akurasi">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>247</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;Tw Cen MT&quot;;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
    <widget class="QPushButton" name="kembali">
     <property name="geometry">
      <rect>
-      <x>620</x>
-      <y>510</y>
-      <width>131</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Tw Cen MT&quot;;background: black;color:white;</string>
-    </property>
-    <property name="text">
-     <string>KEMBALI</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>290</y>
-      <width>291</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Tw Cen MT&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Berikan Jumlah Term:</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="MI">
-    <property name="geometry">
-     <rect>
-      <x>440</x>
-      <y>290</y>
-      <width>211</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>470</y>
-      <width>181</width>
+      <x>710</x>
+      <y>120</y>
+      <width>91</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Tw Cen MT&quot;;</string>
+     <string notr="true">background: #B0E0E6;</string>
     </property>
     <property name="text">
-     <string>Hasil Akurasi Tranning:</string>
+     <string>Kembali</string>
     </property>
    </widget>
-   <widget class="QLabel" name="akurasi">
+   <widget class="QPushButton" name="testing">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>480</y>
-      <width>111</width>
-      <height>16</height>
+      <x>620</x>
+      <y>120</y>
+      <width>91</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Tw Cen MT&quot;;</string>
+     <string notr="true">background: #B0E0E6;</string>
     </property>
     <property name="text">
-     <string/>
+     <string>Testing</string>
     </property>
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="C:/Users/ASUS/Desktop/gbr.qrc"/>
+ </resources>
  <connections/>
 </ui>
